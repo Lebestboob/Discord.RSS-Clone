@@ -1,3 +1,4 @@
+const keepAlive = require('./server');
 const fs = require('fs')
 const path = require('path')
 const DiscordRSSWeb = require('discord.rss-web')
