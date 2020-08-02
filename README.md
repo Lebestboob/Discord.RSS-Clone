@@ -39,10 +39,8 @@ You can't make projects private when using a free account on Repl.it. All the co
 
 <p><a href="https://repl.it/github/Lebestnoob/Discord.RSS-Clone"><img alt="Run on Repl.it" src="https://repl.it/badge/github/Lebestnoob/Discord.RSS-Clone" /></a></p>
 
-2. To configure the bot, create a file named .env using the console and running the following command.
-```
-> .env
-```
+2. To configure the bot, create a file named .env
+
 3. Look at the .env.examaple file, this contains the lines of text that should be present in the newly created .env file.
 
 3. You can use [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) for the MongoDB database and [Redis Labs](https://redislabs.com/) for the Redis database.
