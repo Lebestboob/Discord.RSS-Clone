@@ -1,4 +1,4 @@
-FROM node:12-stretch AS build
+FROM node:15-stretch AS build
 
 RUN apt-get update && apt-get install -y \
         g++ \
@@ -16,7 +16,7 @@ USER node
 RUN npm install
 
 
-FROM node:12-alpine
+FROM node:15-stretch
 
 RUN mkdir /app \
     && chown -R node:node /app
