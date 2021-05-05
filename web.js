@@ -1,10 +1,10 @@
 const keepAlive = require('./server');
 const fs = require('fs')
 const path = require('path')
-const DiscordRSSWeb = require('discord.rss-web')
+const MonitoRSSWeb = require('monitorss-web')
 const configPath = path.join(__dirname, 'settings', 'config.web.json')
 const config = fs.existsSync(configPath) ? JSON.parse(fs.readFileSync(configPath)) : {}
 
-const webClientManager = new DiscordRSSWeb.WebClientManager(config)
+const webClientManager = new MonitoRSSWeb.WebClientManager(config)
 
 webClientManager.start()
