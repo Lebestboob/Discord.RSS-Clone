@@ -1,0 +1,31 @@
+{
+  "name": "monitorss-clone",
+  "author": "synzen",
+  "version": "1.0.19",
+  "description": "Repository of MonitoRSS meant for cloning",
+  "license": "MIT",
+  "main": "server.js",
+  "scripts": {
+    "migrate-v6": "node migrations/v6.js",
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "monitorss": "^6.13.4",
+    "monitorss-web": "0.0.96"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/synzen/MonitoRSS-Clone.git"
+  },
+  "bugs": {
+    "url": "https://github.com/synzen/MonitoRSS-Clone/issues"
+  },
+  "homepage": "https://github.com/synzen/MonitoRSS-Clone#readme",
+  "engines": {
+    "node": ">=12.16"
+  }
+}

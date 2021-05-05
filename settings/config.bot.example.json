@@ -22,17 +22,20 @@
     "runSchedulesOnStart": true,
     "exitOnSocketIssues": true,
     "exitOnDatabaseDisconnect": false,
-    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+    "exitOnExcessRateLimits": true,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0",
+    "feedRequestTimeoutMs": 15000
   },
   "database": {
     "uri": "mongodb://localhost:27017/rss",
-    "redis": "",
     "connection": {},
     "articlesExpire": 14,
     "deliveryRecordsExpire": 2
   },
   "feeds": {
     "refreshRateMinutes": 10,
+    "articleDequeueRate": 1,
+    "articleRateLimit": 0,
     "articleDailyChannelLimit": 0,
     "timezone": "America/New_York",
     "dateFormat": "ddd, D MMMM YYYY, h:mm A z",
@@ -59,5 +62,6 @@
     "parallelBatches": 1,
     "parallelRuns": 1
   },
-  "webURL": ""
+  "webURL": "",
+  "discordSupportURL": "https://discord.gg/pudv7Rx"
 }

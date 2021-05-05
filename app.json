@@ -1,7 +1,7 @@
 {
-	"name": "Discord.RSS",
+	"name": "MonitoRSS",
 	"description": "Discord RSS bot with customizable feeds",
-	"website": "https://github.com/synzen/Discord.RSS",
+	"website": "https://github.com/synzen/MonitoRSS",
 	"logo": "https://discordapp.com/assets/d36b33903dafb0107bb067b55bdd9cbc.svg",
 	"keywords": [
 		"discord",
@@ -10,19 +10,18 @@
 		"feed"
 	],
 	"addons": [{
-			"plan": "mongolab:sandbox"
-		},
-		{
 			"plan": "heroku-redis:hobby-dev"
-		}
-	],
+	}],
 	"env": {
 		"DRSS_START": {
-			"description": "Determine what parts of Discord.RSS to start. Input bot to only start the bot, web to start only the web, or bot-web to start both. If using web, use the Heroku web dyno, NOT the worker dyno to accept requests. To keep the web dyno from sleeping, use something like uptimerobot (free app).",
+			"description": "Determine what parts of MonitoRSS to start. Input bot to only start the bot, web to start only the web, or bot-web to start both. If using web, use the Heroku web dyno, NOT the worker dyno to accept requests. To keep the web dyno from sleeping, use something like uptimerobot (free app).",
 			"value": "bot"
 		},
 		"DRSS_BOT_TOKEN": {
 			"description": "Discord Bot token. Get it here: https://discordapp.com/developers/applications/."
+		},
+		"DRSS_DATABASE_URI": {
+			"description": "MongoDB database URI. Cannot be a folder URI (data would not persist across reboots)."
 		},
 		"DRSS_BOT_PREFIX": {
 			"description": "Prefix for Discord commands.",
@@ -36,8 +35,12 @@
 			"description": "Refresh rate of RSS feeds. A value that is too low may lead to your IP blocked for some sites.",
 			"value": "15"
 		},
+		"DRSSWEB_DATABASE_URI": {
+			"description": "REQUIRED IF DRSS_START IS web OR bot-web. MongoDB database URI. Must be the same as DRSS_DATABASE_URI.",
+			"required": false
+		},
 		"DRSSWEB_ADMINIDS": {
-			"description": "Only relevant if DRSS_START is web or bot-web. Web admin ID(s), separate multiple with commas.",
+			"description": "REQUIRED IF DRSS_START IS web OR bot-web. Web admin ID(s), separate multiple with commas.",
 			"required": false
 		},
 		"DRSSWEB_BOT_TOKEN": {
